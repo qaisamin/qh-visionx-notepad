@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07111f"><meta name="description" content="QH VisionX Notepad — یادداشت‌برداری سریع و امن در مرورگر">
+<title>QH VisionX Notepad</title>
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="brand"><span>QH</span><div><b>QH VisionX</b><small>NOTEPAD</small></div></div>
+<div class="top-actions"><button id="theme" title="حالت نمایش">☾</button><button id="print">🖨️</button><button id="newTop">＋ یادداشت جدید</button></div></header>
+<div class="app">
+<aside id="sidebar">
+<div class="side-top"><button id="newNote">＋ یادداشت جدید</button></div>
+<div class="search"><span>⌕</span><input id="search" placeholder="جستجوی یادداشت‌ها..."></div>
+<div class="note-list" id="noteList"></div>
+</aside>
+<main>
+<div class="editor-head"><div><input id="title" placeholder="عنوان یادداشت..." maxlength="120"><div class="meta" id="saveState">آماده</div></div>
+<div class="editor-actions"><button id="copy">کپی</button><button id="download">دانلود TXT</button><button class="danger" id="delete">حذف</button></div></div>
+<div class="toolbar">
+<button data-cmd="bold"><b>B</b></button><button data-cmd="italic"><i>I</i></button><button data-cmd="underline"><u>U</u></button>
+<button data-cmd="insertUnorderedList">• لیست</button><button data-cmd="insertOrderedList">1. لیست</button>
+<button data-cmd="formatBlock" data-val="h2">عنوان</button><button data-cmd="formatBlock" data-val="p">متن</button>
+<button id="clearFormat">پاک‌سازی قالب</button>
+</div>
+<div id="editor" contenteditable="true" spellcheck="true" data-placeholder="یادداشت خود را اینجا بنویسید..."></div>
+<footer><span id="stats">۰ کلمه · ۰ حرف</span><span>ذخیره خودکار روی همین دستگاه</span></footer>
+</main>
+</div>
+<div id="toast"></div>
+<script src="app.js"></script>
+</body></html>
